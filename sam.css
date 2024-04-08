@@ -1,0 +1,341 @@
+@charset "utf-8";
+
+* {
+	margin:0px;
+	padding:0px;
+}
+
+header {
+	background-color: #ff0000;
+	width: 100%;
+	height: 68px;
+	font-family: Georgia, 'Times New Roman', Times, serif;
+	text-align: center;
+	position : fixed;
+	z-index: 5;
+}
+
+.menu-btn {
+	position: fixed;
+	top: 10px;
+	right: 10px;
+	display: flex;
+	height: 50px;
+	width: 60px;
+	justify-content: center;
+	align-items: center;
+	z-index: 90;
+	background-color: #f00;
+}
+
+.menu-btn span,
+.menu-btn span:before,
+.menu-btn span:after {
+	content: '';
+	display: block;
+	height: 3px;
+	width: 25px;
+	border-radius: 3px;
+	background-color: #ffffff;
+	position: absolute;
+}
+
+.menu-btn span:before {
+	bottom: 8px;
+}
+
+.menu-btn span:after {
+	top: 8px;
+}
+
+#menu-btn-check {
+	display: none;
+}
+
+#menu-btn-check:checked~.menu-btn span {
+	background-color: rgba(255, 255, 255, 0);
+	/*メニューオープン時は真ん中の線を透明にする*/
+}
+
+#menu-btn-check:checked~.menu-btn span::before {
+	bottom: 0;
+	transform: rotate(45deg);
+}
+
+#menu-btn-check:checked~.menu-btn span::after {
+	top: 0;
+	transform: rotate(-45deg);
+}
+
+.menu-content {
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 80;
+	background-color: #f00;
+}
+
+.menu-content ul {
+	padding: 70px 10px 0;
+}
+
+.menu-content ul li {
+	border-bottom: solid 1px #ffffff;
+	list-style: none;
+}
+
+.menu-content ul li a {
+	display: block;
+	width: 100%;
+	font-size: 30px;
+	box-sizing: border-box;
+	color: #ffffff;
+	text-decoration: none;
+	padding: 9px 15px 10px 0;
+	position: relative;
+}
+
+.menu-content ul li a::before {
+	content: "";
+	width: 7px;
+	height: 7px;
+	border-top: solid 2px #ffffff;
+	border-right: solid 2px #ffffff;
+	transform: rotate(45deg);
+	position: absolute;
+	right: 11px;
+	top: 50%;
+}
+
+.menu-content {
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	top: 0;
+	left: 100%;
+	/*leftの値を変更してメニューを画面外へ*/
+	z-index: 80;
+	background-color: #ff0000;
+	transition: all 0.5s;
+	/*アニメーション設定*/
+}
+
+#menu-btn-check:checked~.menu-content {
+	left: 0;
+	/*メニューを画面内へ*/
+}
+
+
+
+h1, .submit {
+	font-size: 50px;
+	font-family: Georgia, serif;
+}
+
+.image h1 {
+	font-size: 80px;
+}
+
+
+li {
+	list-style: none;
+	text-align:center;
+}
+
+a {
+	text-decoration: none;
+	color: rgb(255, 255, 255);
+}
+
+/*
+header li {
+	font-size: 20px;
+	padding: 18px 15px;
+	float: right;
+	vertical-align: middle;
+}*/
+
+
+header .exit {
+	font-size:20px;
+    color: white;
+    width: 100px;
+    padding: 16px;
+    margin-left: 0px;
+	float:left;
+}
+
+header .exit :hover {
+	background-color:aqua;
+	transition-duration: 0.5s;
+}
+
+.slider p {
+    font-family: Georgia, serif;
+    font-size: 25px;
+}
+
+.image {
+	border: 1px solid #000;
+	/*position: relative;*/
+	margin-bottom: 0px;
+	display: block;
+}
+
+.image h1 {
+	position: absolute;
+	color: white;
+	top: 25%;
+	left: 50%;
+	-ms-transform: translate(-50%, -50%);
+	-webkit-transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%);
+}
+
+.image img {
+	width: 100%;
+}
+
+.image {
+	/*animation: fadeIn 1.2s cubic-bezier(0.33, 1, 0.68, 1) forwards;
+	animation: big-small 1.6s;*/
+	display: flex;
+	justify-content: center;
+}
+
+/*-------------------------------------------------------------------------*/
+
+.box {
+	display:flex;
+	text-align:center;
+	justify-content: center;
+}
+
+@media screen and (max-width: 1140px) {
+	.box {
+		flex-direction:column;
+		display:flex;
+		text-align:center;
+		justify-content: center;
+	}
+}
+
+.box h1 {
+	font-size:40px;
+}
+
+/*-------------------------------------------------------------------------*/
+
+.gourmet {
+	background-color: rgb(252, 168, 120);
+	/*animation: slideUp 2.5s;
+	animation-fill-mode: forwards;*/
+	border: 1px solid #000;
+	width: 350px;
+	height: 180px;
+	border-radius: 30px;
+	margin:30px;
+}
+
+/*-------------------------------------------------------------------------*/
+
+.hotel {
+	background-color: rgb(120, 252, 138);
+	/*animation: slideUp 3.0s;
+	animation-fill-mode: forwards;*/
+	border: 1px solid #000;
+	width: 350px;
+	height: 180px;
+	border-radius: 30px;
+	margin:30px;
+	
+}
+
+/*-------------------------------------------------------------------------*/
+
+.tour {
+	background-color: rgb(120, 237, 252);
+	/*animation: slideUp 3.5s;
+	animation-fill-mode: forwards;*/
+	border: 1px solid #000;
+	width: 350px;
+	height: 180px;
+	border-radius: 30px;
+	margin:30px;
+}
+
+
+
+/*-------------------------------------------------------------------------*/
+
+.bg_pattern {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100vw;
+	height: 100vh;
+	background-color: #ffe9a7;
+	opacity: 0.4;
+	z-index: -1;
+}
+
+.Lines_v4 {
+	background-size: 40px 40px;
+	background-image: repeating-linear-gradient(to right, #ffc107, #ffc107 2px, #ffe9a7 2px, #ffe9a7);
+}
+
+.space {
+	height:68px;
+}
+
+/*
+@keyframes fadeIn {
+	0% {
+		opacity: 0;
+	}
+
+	100% {
+		opacity: 1;
+	}
+}
+
+@keyframes slideIn {
+	0% {
+		opacity: 0;
+		transform: translateX(-64px);
+	}
+
+	100% {
+		opacity: 1;
+		transform: translateX(0);
+	}
+}
+
+@keyframes slideUp {
+	0% {
+		opacity: 0;
+		transform: translateY(64px);
+	}
+
+	100% {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+
+@keyframes big-small {
+	0% {
+		opacity: 0;
+		width: 120%;
+		height: auto;
+	}
+
+	100% {
+		opacity: 1;
+		width: 100%;
+		height: auto;
+	}
+}
+*/

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<link rel="stylesheet" href="sam.css" type="text/css" />
+
+	<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css">
+	<link rel="stylesheet" type="text/css" href="sldie.css">
+
+	<script src="sample.js"></script>
+	<title>福井県旅行ガイドアプリ</title>
+</head>
+
+<body>
+	<div class="bg_pattern Lines_v4"></div>
+
+	<header>
+		<a href="index.html" class="exit">ホーム</a>
+		<div class="hamburger-menu">
+			<input type="checkbox" id="menu-btn-check">
+			<label for="menu-btn-check" class="menu-btn"><span></span></label>
+			<!--ここからメニュー-->
+			<div class="menu-content">
+				<ul>
+					<li>
+						<a href="index.html">ホームに戻る</a>
+					</li>
+					<li>
+						<a href="test25.php">グルメを検索</a>
+					</li>
+					<li>
+						<a href="detail.php">宿泊施設を検索</a>
+					</li>
+					<li>
+						<a href="map.php">観光地を検索</a>
+					</li>
+				</ul>
+			</div>
+			<!--ここまでメニュー-->
+		</div>
+	</header>
+
+
+	<!--
+		<img src="dinasour.JPG" alt="">
+		<center>
+			<h1>福井県旅行ガイドアプリ</h1>
+		</center>
+		
+	<div class="loopSlide">
+		<img src="dinasour.JPG">
+		<img src="crub.jpg">
+		<img src="museum.JPG" alt="">
+		<img src="tojinbo.jpg" alt="">
+	</div> -->
+	<div class="space"></div>
+
+	<ul class="slider">
+		<li><img src="dinasour.png" alt=""><p>福井駅</p></li>
+		<li><img src="crub.png" alt=""><p>越前ガニ</p></li>
+		<li><img src="museum.png" alt=""><p>恐竜博物館</p></li>
+		<li><img src="tojinbo.png" alt=""><p>東尋坊</p></li>
+		<li><img src="yuri.png" alt=""><p>ゆりの里公園</p></li>
+		<li><img src="maruoka.png" alt=""><p>丸岡城</p></li>
+		<li><img src="awara.png" alt=""><p>あわら温泉　美松</p></li>
+		<!--/slider-->
+	</ul>
+
+	<center>
+		<h1>福井県旅行ガイドアプリ</h1>
+	</center>
+
+	<div class="box">
+		<div class="gourmet">
+			<center>
+				<h1>福井県のグルメ</h1>
+				<FORM action="test25.php" method="post" name="tname">
+					<input class="submit btn" type="submit" value="グルメを検索" /><br>
+				</FORM>
+			</center>
+		</div>
+
+		<div class="hotel">
+			<center>
+				<h1>福井県の宿泊施設</h1>
+
+				<FORM action="detail.php" method="post" name="tname">
+					<input class="submit btn" type="submit" value="宿泊施設を検索" />
+
+				</FORM>
+			</center>
+		</div>
+
+		<div class="tour">
+			<center>
+				<h1>福井県の観光地</h1>
+
+				<FORM action="map.php" method="post" name="tname">
+
+					<input class="submit btn" type="submit" value="観光地を検索"/>
+				</FORM>
+			</center>
+		</div>
+
+	</div>
+	<link rel="stylesheet" href="btn.css" type="text/css" />
+	<script src="https://code.jquery.com/jquery-3.4.1.min.js"
+		integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+	<!--自作のJS-->
+	<script src="slide.js"></script>
+</body>
+
+</html>

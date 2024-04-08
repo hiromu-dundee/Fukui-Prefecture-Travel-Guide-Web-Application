@@ -1,0 +1,40 @@
+@charset "utf-8";
+
+* {
+	margin:0px;
+	padding:0px;
+}
+
+.btn {
+    /*
+    background-color: #0f0;
+    background-image: linear-gradient(to right, #00ffff 0%, #0066ff 100%);
+    */
+
+    background: linear-gradient(to right, skyblue, yellow);
+    box-shadow: 5px 3px 3px rgb(0, 0, 0);
+    font-size: 30px;
+    width: 300px;
+    height: 80px;
+    border-radius: 30px;
+    color: #000;
+    border: none;
+}
+
+.btn:hover {
+    transform: scale(1.1);
+    transition-duration: 0.5s;
+}
+
+input {
+    display: block;
+    width: 400px;
+    padding: 5px 0;
+    border: none;
+    border-bottom: solid 1px #1abc9c;
+    background: linear-gradient(to bottom, transparent 92%, #1abc9c 8%) no-repeat;
+    background-position: -400px 0;
+    background-size: 400px 100%;
+    font-size: 1.4rem;
+    transition: all ease-in-out 0.3s;
+}
